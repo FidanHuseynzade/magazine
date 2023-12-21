@@ -42,13 +42,13 @@ const items: MenuItem[] = [
   },
   {
     label: (
-      <a href="https://time.com/" target="_blank" rel="noopener noreferrer">
+      <a href="https://www.instagram.com/glorymagazines?igsh=OGQ5ZDc2ODk2ZA==" target="_blank" rel="noopener noreferrer">
         Link
       </a>
     ),
     key: 'alipay',
     icon: <LinkIcon />,
-    href: 'https://time.com/',
+    href: 'https://www.instagram.com/glorymagazines?igsh=OGQ5ZDc2ODk2ZA==',
   },
 ];
 
