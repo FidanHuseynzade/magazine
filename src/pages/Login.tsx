@@ -30,7 +30,7 @@ const Login: React.FC = () => (
       <img
         src="https://i.pinimg.com/736x/2e/50/32/2e503286384d59016a75bc0498414fa4.jpg"
         alt="Campaign Magazine"
-        style={{ width: '350px', height: 'auto', borderRadius: '5px', border: '2px solid rgba(0, 0, 0, 0.253)',  }} 
+        style={{ width: '350px', height: 'auto', borderRadius: '5px', border: '2px solid rgba(0, 0, 0, 0.253)' }} 
       />
     </div>
   </div>

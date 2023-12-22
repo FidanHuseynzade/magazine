@@ -27,7 +27,7 @@ const Weather: React.FC = () => {
 
     return (
         <>
-        <img src="https://cdn.iconscout.com/icon/free/png-256/free-weather-296-1100758.png" alt="" style={{width:'40px'}}/>
+        <img src="https://cdn.iconscout.com/icon/free/png-256/free-weather-296-1100758.png" alt="" style={{width:'30px'}}/>
             <Input
                 placeholder="Enter city name"
                 style={{ width: '300px', marginRight: '10px' }}
