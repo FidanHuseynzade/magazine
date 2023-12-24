@@ -1,32 +1,50 @@
-import React from 'react';
-import { Input, Button } from 'antd';
-import type { CheckboxChangeEvent } from 'antd/es/checkbox';
-import { Helmet } from 'react-helmet';
+import { Typography } from "@mui/material";
+import { Col, Row } from "antd";
+import { Tabs } from "antd";
+import type { TabsProps } from "antd";
+import UserSignUp from "./UserSignUp";
+import PublisherSignUp from "./PublisherSignUp";
 
-const onChange = (e: CheckboxChangeEvent) => {
-  console.log(`checked = ${e.target.checked}`);
+const Register = () => {
+  const onChange = (key: string) => {
+    console.log(key);
+  };
+
+  const items: TabsProps["items"] = [
+    {
+      key: "1",
+      label: "Sign Up as user",
+      children: <UserSignUp />,
+    },
+    {
+      key: "2",
+      label: "Sign Up as Publisher",
+      children: <PublisherSignUp />,
+    },
+  ];
+  return (
+    <Row style={{ justifyContent: "center", marginTop: "40px" }}>
+      <Col span={8} xl={8} md={24} xs={24}>
+        <form
+          style={{
+            boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
+            padding: "20px 25px",
+            borderRadius: "10px",
+          }}
+        >
+          <Typography align="center" variant="h5">
+            Sign Up
+          </Typography>
+          <Tabs tabBarStyle={{
+            display:'flex',
+            justifyContent:'center',
+            alignItems:'center',
+            margin:'20px auto'
+          }} defaultActiveKey="1" items={items} onChange={onChange} />
+        </form>
+      </Col>
+    </Row>
+  );
 };
-
-const Register: React.FC = () => (
-	<>
-	<Helmet>
-      <title>Register</title>
-	  <link rel="icon" href="https://pbs.twimg.com/profile_images/1467293619681996801/kfwm-JIt_400x400.jpg" />
-    </Helmet>
-  <div style={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center' }}>
-    <div>
-	<h1>Email</h1>
-      <Input style={{ width: '100%' }} placeholder="Enter email" />
-	  <h1>Username</h1>
-      <Input style={{ width: '100%' }} placeholder="Enter username" />
-      <h1>Password</h1>
-      <Input style={{ width: '100%' }} placeholder="Enter password" type="password" />
-      <Button type="primary" style={{ width: '100%', marginTop:'15px' }}>
-        Register
-      </Button>
-    </div>
-  </div>
-	</>
-);
 
 export default Register;
