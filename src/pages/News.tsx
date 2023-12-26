@@ -3,13 +3,14 @@ import { experimentalStyled as styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import './News.css'
 import { Pagination } from 'swiper/modules';
 import Weather from '../components/Weather';
+import axios from 'axios';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -19,6 +20,14 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
   height: '250px',
 }));
+
+// let [news, setNews] = useState('')
+
+// useEffect(() => {
+//   fetch("http://localhost:3000/news")
+//   .then(response => response.json())
+//   .then(data => setNews(data.message))
+// },[])
 
 const HomePage: React.FC = () => (
   <>
